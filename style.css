@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+}
+
+.logo img {
+  height: 40px;
+  background: none;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6a00;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.hero {
+  height: 100vh;
+  background: url("Assets/hero.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+#programs {
+  background: url(Assets/hero2.png) center/cover no-repeat;
+}
+.hero-content {
+  max-width: 700px;
+  animation: fadeUp 1.2s ease;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #ff6a00;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+    transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.5);
+}
+
+section {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  padding: 25px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.hero p {
+  margin-bottom: 40px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.5);
+
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background: #ff6a00;
+  border: none;
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background: #020617;
+    width: 200px;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+h2 {
+  padding: 20px;
+}
+#about {
+  background: linear-gradient(black, rgba(255, 106, 0, 0.541));
+}
+#contact {
+  background: url(Assets/hero2.png) center/cover no-repeat;
+}
+#community {
+  background: linear-gradient(black, rgba(255, 106, 0, 0.541));
+}
+/* Community Section */
+#community {
+  background-color: #111111;   
+  color: #FFFFFF;            
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#community h2 {
+  color: #FF6A00;            
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#community p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: #CCCCCC;           
+}
+
+.community-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background-color: #1a1a1a;  
+  padding: 20px 30px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box h3 {
+  color: #FF6A00;             
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  font-size: 1em;
+  color: #FFFFFF;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.5);
+}
